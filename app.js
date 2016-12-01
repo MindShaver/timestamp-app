@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var path = require('path');
+
 
 app.get('/', function(req, res){
     res.end("Hello World");
@@ -8,12 +10,14 @@ app.get('/', function(req, res){
 // Grabs our passed in Date/Time
 app.get('/:dateTime', function(req, res) {
     
+    var myDate = new Date();
+    var naturalDate = new Date(req.params.dateTime).toDateString();
+    var unixDate = new Date();
     
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({
-        "first": req.params.dateTime,
-        "second": "This is a sample prop",
-        "third": "This time with both - " + req.params.dateTime
+        "unix": unixDate,
+        "natural": naturalDate
     }, null, 3));
 })
 
