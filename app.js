@@ -5,7 +5,10 @@ app.get('/', function(req, res){
     res.end("Hello World");
 });
 
+// Grabs our passed in Date/Time
 app.get('/:dateTime', function(req, res) {
+    
+    
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({
         "first": req.params.dateTime,
