@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 3500;
 
 app.get('/', function(req, res){
     res.sendFile('index.html', {root: __dirname});
@@ -30,6 +31,6 @@ app.get('/:dateTime', function(req, res) {
     }, null, 3));
 })
 
-app.listen(8080, function(){
-    console.log("Server running at 8080");
+app.listen(port, function(){
+    console.log("Server running at " + port);
 });
