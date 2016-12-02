@@ -20,7 +20,7 @@
         </ol>
     </blockquote>
     <h2>Example usage:</h2>
-    <code>mindshaver-timestamp-service.herokuapp.com/1456790400</code>
+    <code>mindshaver-timestamp-service.herokuapp.com/1456790400</code><br/>
     <code>mindshaver-timestamp-service.herokuapp.com/March 1 2016</code>
     <h2>Example output:</h2>
     <code>{<br/>
